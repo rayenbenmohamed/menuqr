@@ -7,331 +7,326 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            position: relative;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             color: #333;
-        }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('./assets/imgs/back.jpg') no-repeat center center fixed;
-            background-size: cover;
-            opacity: 0.3; /* Adjust the opacity to your liking */
-            z-index: -1; /* Ensure the background is behind the content */
+            background-color: #f8f9fa;
         }
         .header {
-            background-color: #343a40;
+            background-image: url('../fran-ais-main/assets/imgs/back.jpg'); /* Remplacez par l'URL de votre image de café */
+            background-size: cover;
+            background-position: center;
             color: #fff;
-            padding: 20px 0;
+            padding: 60px 0;
             text-align: center;
             margin-bottom: 30px;
-
         }
-        .menu-section {
-            margin-bottom: 30px;
-        }
-        .menu-title {
-            text-transform: uppercase;
-            font-weight: bold;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            font-size: 24px;
-       
-        }
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            
-        }
-        .menu-item span {
+        .header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
             font-weight: bold;
         }
-        .price {
-            color: #007bff;
+        .header p {
+            font-size: 1.2em;
         }
         .menu-container {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: relative;
-            z-index: 1; /* Ensure the content is above the background */
+            z-index: 1;
+        }
+        .card-title {
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+        .card-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1em;
+            color: #555;
         }
         .category-logo {
             width: 30px;
             height: 30px;
             margin-left: 10px;
         }
-       
     </style>
 </head>
 <body>
 
     <div class="header">
         <h1>City Coffee Shop</h1>
-        <img src="./assets/imgs/back.jpg" alt="Logo" class="category-logo"></div>
-        
+        <p>Le meilleur café de la ville</p>
     </div>
 
     <div class="container menu-container">
-        <div class="menu-section">
-            <div class="menu-title">Petit Déjeuner </div>
-            <div class="menu-item">
-                <span>Fast</span> <span class="price">6 DT</span>
+        <div class="row">
+            <!-- Petit Déjeuner -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/pdej.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Petit Déjeuner</h5>
+                        <p class="card-text">Fast - 6 DT</p>
+                        <p class="card-text">Kids - 7,5 DT</p>
+                        <p class="card-text">Quotidien - 11,5 DT</p>
+                        <p class="card-text">Solo - 16,5 DT</p>
+                        <p class="card-text">City - 27 DT</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Kids</span> <span class="price">7,5 DT</span>
+            <!-- Café -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/cafe.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Café</h5>
+                        <p class="card-text">Express - 2,5 DT</p>
+                        <p class="card-text">Américain - 2,5 DT</p>
+                        <p class="card-text">Capucin - 2,7 DT</p>
+                        <p class="card-text">Grand Crème - 3 DT</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Quotidien</span> <span class="price">11,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Solo</span> <span class="price">16,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>City</span> <span class="price">27 DT</span>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Café </div>
-            <div class="menu-item">
-                <span>Express</span> <span class="price">2,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Américain</span> <span class="price">2,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Capucin</span> <span class="price">2,7 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Grand Crème</span> <span class="price">3 DT</span>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Flavored Coffee </div>
-            <div class="menu-item">
-                <span>Chocolat au lait</span> <span class="price">4 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Nescafé</span> <span class="price">4,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Café Turk</span> <span class="price">4,5 DT</span>
+            <!-- Flavored Coffee -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/cafee.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Flavored Coffee</h5>
+                        <p class="card-text">Chocolat au lait - 4 DT</p>
+                        <p class="card-text">Nescafé - 4,5 DT</p>
+                        <p class="card-text">Café Turk - 4,5 DT</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Hot and Frozen </div>
-            <div class="menu-item">
-                <span>Caramel</span> <span class="price">5 DT</span>
+        <div class="row">
+            <!-- Hot and Frozen -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/frozen.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Hot and Frozen</h5>
+                        <p class="card-text">Caramel - 5 DT</p>
+                        <p class="card-text">Noisette - 5 DT</p>
+                        <p class="card-text">Capuccino - 5 DT</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Noisette</span> <span class="price">5 DT</span>
+            <!-- Pack Gourmand -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/cake.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Pack Gourmand</h5>
+                        <p class="card-text">Toast au choix + soda - 6,5 DT</p>
+                        <p class="card-text">Cheesecake + Café - 7,5 DT</p>
+                        <p class="card-text">Fondant + Café + eau 0,5L - 8 DT</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Capuccino</span> <span class="price">5 DT</span>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Pack Gourmand </div>
-            <div class="menu-item">
-                <span>Toast au choix + soda</span> <span class="price">6,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Cheesecake + Café</span> <span class="price">7,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Fondant + Café + eau 0,5L</span> <span class="price">8 DT</span>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Boisson Soft </div>
-            <div class="menu-item">
-                <span>Eau 0,5 L</span> <span class="price">1,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Eau 1 L</span> <span class="price">2,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Soda</span> <span class="price">3,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Boisson importée</span> <span class="price">4 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Boisson énergétique</span> <span class="price">7 DT</span>
+            <!-- Boisson Soft -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/drinks.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Boisson Soft</h5>
+                        <p class="card-text">Eau 0,5 L - 1,5 DT</p>
+                        <p class="card-text">Eau 1 L - 2,5 DT</p>
+                        <p class="card-text">Soda - 3,5 DT</p>
+                        <p class="card-text">Boisson importée - 4 DT</p>
+                        <p class="card-text">Boisson énergétique - 7 DT</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Thé </div>
-            <div class="menu-item">
-                <span>Thé vert</span> <span class="price">2,5 DT</span>
+        <div class="row">
+            <!-- Thé -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/the.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Thé</h5>
+                        <p class="card-text">Thé vert - 2,5 DT</p>
+                        <p class="card-text">Set de Thé vert - 4 DT</p>
+                        <p class="card-text">Thé infusion - 3,5 DT</p>
+                        <p class="card-text">Kyuffi - 4 DT</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Set de Thé vert</span> <span class="price">4 DT</span>
+            <!-- Jus Frais -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/jus.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Jus Frais</h5>
+                        <p class="card-text">Citronnade - 5 DT</p>
+                        <p class="card-text">Orange - 5 DT</p>
+                        <p class="card-text">Fraise - 6,5 DT</p>
+                        <p class="card-text">Lait de poule - 6,5 DT</p>
+                        <p class="card-text">Bananos - 9 DT</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Thé infusion</span> <span class="price">3,5 DT</span>
+            <!-- Milkshake -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="./assets/imgs/mill.jpg" class="card-img-top" alt="Image de l'annonce">
+                    <div class="card-body">
+                        <h5 class="card-title">Milkshake</h5>
+                        <p class="card-text">Fraise - 6 DT</p>
+                        <p class="card-text">Chocolat - 6,5 DT</p>
+                        <p class="card-text">Oreo - 7 DT</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <span>Kyuffi</span> <span class="price">4 DT</span>
+            <div class="row">
+                <!-- Mojito -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="./assets/imgs/blue.jpg" class="card-img-top" alt="Mojito Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Mojito</h5>
+                            <div class="menu-item">
+                                <span>Virgin</span> <span class="price">6,5 DT</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Blue</span> <span class="price">7 DT</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Strawberry</span> <span class="price">7 DT</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Raspberry</span> <span class="price">7,5 DT</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Black</span> <span class="price">8 DT</span>
+                            </div>
+                            <div class="menu-item">
+                                <span>Boisson énergétique</span> <span class="price">+3 DT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="./assets/imgs/gfr.jpg" class="card-img-top" alt="Gaufre / Pancake Image">
+                <div class="card-body">
+                    <h5 class="card-title">Gaufre / Pancake</h5>
+                    <div class="menu-item">
+                        <span>Chocolat</span> <span class="price">6 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Triple chocolat</span> <span class="price">8 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Nutella</span> <span class="price">8 DT</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Jus Frais </div>
-            <div class="menu-item">
-                <span>Citronnade</span> <span class="price">5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Orange</span> <span class="price">5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Fraise</span> <span class="price">6,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Lait de poule</span> <span class="price">6,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Bananos</span> <span class="price">9 DT</span>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Milkshake </div>
-            <div class="menu-item">
-                <span>Fraise</span> <span class="price">6 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Chocolat</span> <span class="price">6,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Oreo</span> <span class="price">7 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Snickers</span> <span class="price">7,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Nutella</span> <span class="price">8 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Lotus</span> <span class="price">8 DT</span>
+        <!-- Crêpe sucrée -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="./assets/imgs/crp.jpg" class="card-img-top" alt="Crêpe sucrée Image">
+                <div class="card-body">
+                    <h5 class="card-title">Crêpe sucrée</h5>
+                    <div class="menu-item">
+                        <span>Chocolat</span> <span class="price">6 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Triple chocolat</span> <span class="price">8 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Nutella</span> <span class="price">8,5 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Lotus</span> <span class="price">8 DT</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Mojito </div>
-            <div class="menu-item">
-                <span>Virgin</span> <span class="price">6,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Blue</span> <span class="price">7 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Strawberry</span> <span class="price">7 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Raspberry</span> <span class="price">7,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Black</span> <span class="price">8 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Boisson énergétique</span> <span class="price">+3 DT</span>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Gaufre / Pancake </div>
-            <div class="menu-item">
-                <span>Chocolat</span> <span class="price">6 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Triple chocolat</span> <span class="price">8 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Nutella</span> <span class="price">8 DT</span>
+    </div>
+    <div class="row">
+        <!-- Crêpe salée -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="./assets/imgs/crpp.jpg" class="card-img-top" alt="Crêpe salée Image">
+                <div class="card-body">
+                    <h5 class="card-title">Crêpe salée</h5>
+                    <div class="menu-item">
+                        <span>Salami</span> <span class="price">5 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Jambon</span> <span class="price">6 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Thon</span> <span class="price">8,5 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Tunisienne</span> <span class="price">8,5 DT</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Crêpe sucrée </div>
-            <div class="menu-item">
-                <span>Chocolat</span> <span class="price">6 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Triple chocolat</span> <span class="price">8 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Nutella</span> <span class="price">8,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Lotus</span> <span class="price">8 DT</span>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Crêpe salée </div>
-            <div class="menu-item">
-                <span>Salami</span> <span class="price">5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Jambon</span> <span class="price">6 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Thon</span> <span class="price">8,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Tunisienne</span> <span class="price">8,5 DT</span>
+        <!-- Omelette -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="./assets/imgs/omm.jpg" class="card-img-top" alt="Omelette Image">
+                <div class="card-body">
+                    <h5 class="card-title">Omelette</h5>
+                    <div class="menu-item">
+                        <span>Végétarienne</span> <span class="price">4,5 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Salami</span> <span class="price">5 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Jambon</span> <span class="price">6 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Thon</span> <span class="price">8,5 DT</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Omelette
-                <span>Végétarienne</span> <span class="price">4,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Salami</span> <span class="price">5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Jambon</span> <span class="price">6 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Thon</span> <span class="price">8,5 DT</span>
+        <!-- Chicha -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="./assets/imgs/chicha.jpg" class="card-img-top" alt="Chicha Image">
+                <div class="card-body">
+                    <h5 class="card-title">Chicha</h5>
+                    <div class="menu-item">
+                        <span>Chicha</span> <span class="price">7 DT</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Chicha </div>
-            <div class="menu-item">
-                <span>Chicha</span> <span class="price">7 DT</span>
+    </div>
+    <div class="row">
+        <!-- Autres -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="./assets/imgs/tt.jpg" class="card-img-top" alt="Autres Image">
+                <div class="card-body">
+                    <h5 class="card-title">Autres</h5>
+                    <div class="menu-item">
+                        <span>Chocolat chaud</span> <span class="price">6 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Mini Pop Corn</span> <span class="price">2,5 DT</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>Pop Corn</span> <span class="price">3,5 DT</span>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="menu-section">
-            <div class="menu-title">Autres </div>
-            <div class="menu-item">
-                <span>Chocolat chaud</span> <span class="price">6 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Mini Pop Corn</span> <span class="price">2,5 DT</span>
-            </div>
-            <div class="menu-item">
-                <span>Pop Corn</span> <span class="price">3,5 DT</span>
-            </div>
-        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
